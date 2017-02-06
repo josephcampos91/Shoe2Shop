@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Shoe2Shop.Application.Web.Models.Store>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col col-xs-12">
+        <h2>Tiendas</h2>
+    </div>
+</div>
+
+<form class="form-group">
+    <div class="row">
+        <div class="col col-xs-12">
+            <table class="table table-responsive table-bordered table-hover">
+                <tr class="table-header">
+                    <th>
+                        C&oacute;digo
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Direcci&oacute;n
+                    </th>
+                    <th>Acc&oacute;n</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Address)
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Details","Store",new { id = item.Id })">
+                                Ver detalles
+                                <span class="glyphicon glyphicon-chevron-right">
+                                </span>
+
+                            </a>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-xs-4 col-sm-3 col-md-2">
+            <a class="btn btn-primary" href="@Url.Action("Index", "Store")"><i class="glyphicon glyphicon-chevron-left"></i>Regresar</a>
+        </div>
+    </div>
+</form>

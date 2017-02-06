@@ -3,13 +3,19 @@ using System.Collections.Generic;
 
 namespace Shoe2Shop.Application.Api
 {
-    public class ReadStoresRes : Response
+    public class ReadStoresRes : ResponseList
     {
-        public List<Store> LstStores { get; set; }
+        private List<Store> _stores;
 
         public ReadStoresRes() : base()
         {
-            LstStores = new List<Store>();
+            this._stores = new List<Store>();
+        }
+
+        public List<Store> Stores
+        {
+            get { return this._stores; }
+            set { this._stores = value; this.TotalElemens = value.Count; }
         }
     }
 }

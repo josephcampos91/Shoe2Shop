@@ -25,6 +25,7 @@ namespace Shoe2Shop.Application.Web
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/customizer.css",
                       "~/Content/site.css"));
         }
     }

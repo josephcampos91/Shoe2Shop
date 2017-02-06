@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Shoe2Shop.Application.Web.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col col-xs-12">
+        <h2>Art&iacute;culos</h2>
+    </div>
+</div>
+
+<form class="form-group">
+    <div class="row">
+        <div class="col col-xs-12">
+            <table class="table table-responsive table-bordered table-hover">
+                <tr class="table-header">
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Descripci&oacute;n
+                    </th>
+                    <th>
+                        Precio
+                    </th>
+                    <th>
+                        Total en estantes
+                    </th>
+                    <th>
+                        Total en bodega
+                    </th>
+                    <th>
+                        Tienda
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TotalShelf)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TotalVault)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StoreName)
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-xs-4 col-sm-3 col-md-2">
+            <a class="btn btn-primary" href="@Url.Action("Index", "Home")"><i class="glyphicon glyphicon-chevron-left"></i>Regresar</a>
+        </div>
+    </div>
+</form>

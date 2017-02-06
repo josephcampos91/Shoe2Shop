@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using Shoe2Shop.Application.Web.Models;
+using System.Web.Mvc;
 
 namespace Shoe2Shop.Application.Web.Controllers
 {
@@ -7,13 +8,23 @@ namespace Shoe2Shop.Application.Web.Controllers
         // GET: Store
         public ActionResult Index()
         {
-            return View();
+            ReadStoresRes oResponse = StoreModels.ReadStores();
+
+            if (oResponse.Success)
+                return View(oResponse.Stores);
+            else
+                return View(new System.Collections.Generic.List<Store>());
         }
 
         // GET: Store/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            ReadArticlesXStoreRes oResponse = ArticleModels.ReadArticlesXStore(id);
+
+            if (oResponse.Success)
+                return View(oResponse.Articles);
+            else
+                return View(new System.Collections.Generic.List<Store>());
         }
 
         // GET: Store/Create

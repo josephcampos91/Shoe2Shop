@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoe2Shop.Application.Web", "Shoe2Shop.Application.Web\Shoe2Shop.Application.Web.csproj", "{EF614E7C-154B-4FA1-ABD7-1FC5DCBF35B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoe2Shop.Application.Entities", "Shoe2Shop.Application.Entities\Shoe2Shop.Application.Entities.csproj", "{29408EE6-0E28-4122-8AFC-554C526381C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoe2Shop.Application.Api", "Shoe2Shop.Application.Api\Shoe2Shop.Application.Api.csproj", "{E12D1CCD-46C9-49FD-A666-D80B2FF55B59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF614E7C-154B-4FA1-ABD7-1FC5DCBF35B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF614E7C-154B-4FA1-ABD7-1FC5DCBF35B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF614E7C-154B-4FA1-ABD7-1FC5DCBF35B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF614E7C-154B-4FA1-ABD7-1FC5DCBF35B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29408EE6-0E28-4122-8AFC-554C526381C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29408EE6-0E28-4122-8AFC-554C526381C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29408EE6-0E28-4122-8AFC-554C526381C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29408EE6-0E28-4122-8AFC-554C526381C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E12D1CCD-46C9-49FD-A666-D80B2FF55B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E12D1CCD-46C9-49FD-A666-D80B2FF55B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E12D1CCD-46C9-49FD-A666-D80B2FF55B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E12D1CCD-46C9-49FD-A666-D80B2FF55B59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
